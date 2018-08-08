@@ -4,12 +4,19 @@ RSpec.describe PagesController, type: :controller do
 
   
   describe "GET #home" do
-    render_views
+    
+    #render_views
+    
     it "returns http success" do
       get :home
       #expect(response).to have_http_status(:success)
       response.should be_success
     end
+
+    #it "should have right title" do
+      #get "home"
+      #response.should have_selector("title", :content => "Ruby on Rails Tutorial Sample App | Home")
+    #end
 
   end
 
